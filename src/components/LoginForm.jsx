@@ -3,7 +3,7 @@ import "../styles/LoginForm.css"
 
 function LoginForm () {
 
-    const[loginData, setLoginData] = useState({username: "", password : ""})
+    const[loginData, setLoginData] = useState({userId: "", password : ""})
 
     const handleLoginSubmit = async (event) => {
         event.preventDefault();
@@ -26,12 +26,12 @@ function LoginForm () {
     return (
         <div class="login-container">
             <form class="login-form" onSubmit={handleLoginSubmit}>
-                 <h2>Welcome Back!</h2>
+                 <h1>Welcome Back!</h1>
                  <input 
                     type="text" 
-                    placeholder="Enter username"
-                    value={loginData.username}
-                    onChange={(e) => setLoginData({ ...loginData, username: e.target.value })}
+                    placeholder="Enter userId"
+                    value={loginData.userId}
+                    onChange={(e) => setLoginData({ ...loginData, userId: e.target.value })}
                  />
 
                  <input 

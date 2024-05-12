@@ -1,4 +1,4 @@
-.login-container {
+.lending-form-container {
     min-height: 60vh;
     min-width: 50vw;
     background-color: rgb(243, 243, 237);
@@ -11,7 +11,7 @@
     justify-content: center;
 }
   
-.login-form {
+.lending-form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     width: 90%;
 }
 
-.login-form > h1 {
+.lending-form > h1 {
     text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
@@ -30,7 +30,7 @@
     text-shadow: 1px 1px #060606;
 }
 
-.login-form > input, textarea {
+.lending-form > input, textarea {
     padding: 10px;
     outline-style: none;
     margin: 15px 5px;
@@ -40,11 +40,11 @@
     border: solid rgb(241, 145, 128) 1px;
 }
 
-.login-form > input:focus {
+.lending-form > input:focus {
     outline-color: transparent;
 }
 
-.login-form > Button {
+.lending-form > Button {
     padding: 10px 0;
     font-size: 1rem;
     margin: 15px 5px;
@@ -62,7 +62,7 @@
 }
 
 
-.login-form > Button:hover {
+.lending-form > Button:hover {
     cursor: pointer;
     background-color: #0a8d48 !important;
     color: white;

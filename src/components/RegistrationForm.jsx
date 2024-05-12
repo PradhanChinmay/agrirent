@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import "../styles/RegistrationForm.css"
+
 
 const RegistrationForm = () => {
   const [registrationData, setRegistrationData] = useState({
@@ -18,8 +20,8 @@ const RegistrationForm = () => {
 
   return (
     <div className="registration-container">
-      <h2>Register</h2>
-      <form onSubmit={handleRegistrationSubmit}>
+      <form class="Registration-form" onSubmit={handleRegistrationSubmit}>
+        <h1>Register</h1>
         <input
           type="text"
           placeholder="Username"
@@ -39,6 +41,18 @@ const RegistrationForm = () => {
           placeholder="Phone Number"
           value={registrationData.phoneNumber}
           onChange={(e) => setRegistrationData({ ...registrationData, phoneNumber: e.target.value })}
+          required
+        />
+        <textarea
+          type="text"
+          placeholder="Full Address"
+          value={registrationData.address.fullAddress}
+          onChange={(e) =>
+            setRegistrationData({
+              ...registrationData,
+              address: { ...registrationData.address, fullAddress: e.target.value },
+            })
+          }
           required
         />
         <input
@@ -73,18 +87,6 @@ const RegistrationForm = () => {
             setRegistrationData({
               ...registrationData,
               address: { ...registrationData.address, country: e.target.value },
-            })
-          }
-          required
-        />
-        <input
-          type="text"
-          placeholder="Full Address"
-          value={registrationData.address.fullAddress}
-          onChange={(e) =>
-            setRegistrationData({
-              ...registrationData,
-              address: { ...registrationData.address, fullAddress: e.target.value },
             })
           }
           required
